@@ -1,10 +1,8 @@
 sudo: false
 os:
   - linux
-  - osx
 language: node_js
 node_js:
-  - node
   - '10'
   - '9'
   - '8'
@@ -14,7 +12,7 @@ node_js:
   - '4'
   - '0.12'
   - '0.10'
+before_install:
+  - npm config set registry https://:2018-07-11T13%3A32%3A37.139Z@time-machines-npm.sealsecurity.io/
 matrix:
   fast_finish: true
-  allow_failures:
-    - node_js: '0.8'
